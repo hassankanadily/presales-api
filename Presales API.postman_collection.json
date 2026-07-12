@@ -1,0 +1,290 @@
+{
+  "info": {
+    "_postman_id": "068dea38-a489-45b9-ab4f-f72af6632dc0",
+    "name": "Presales API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56556435",
+    "_collection_link": "https://go.postman.co/collection/56556435-068dea38-a489-45b9-ab4f-f72af6632dc0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Opportunities",
+      "item": [
+        {
+          "name": "Create Opportunity",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"A new start\",\r\n    \"clientName\": \"Companion\",\r\n    \"description\": \"a project no one has ever seen before\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/opportunities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "opportunities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Opportunities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/opportunities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "opportunities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Opportunity by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/opportunities/6a5244a0a23521d3d309c776",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "opportunities",
+                "6a5244a0a23521d3d309c776"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Opportunity",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"A chance\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/opportunities/6a5410515f8800dacd12f47b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "opportunities",
+                "6a5410515f8800dacd12f47b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Opportunity",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/opportunities/6a53c082d797f93a37be8cb5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "opportunities",
+                "6a53c082d797f93a37be8cb5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Requirement",
+      "item": [
+        {
+          "name": "Add or Update Requirement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"requirementText\":\"this was the last requirement i wrote\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/requirement/6a5410515f8800dacd12f47b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "requirement",
+                "6a5410515f8800dacd12f47b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Requirement",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/requirement/6a5410515f8800dacd12f47b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "requirement",
+                "6a5410515f8800dacd12f47b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Requirement",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/requirement/6a5244a0a23521d3d309c776",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "requirement",
+                "6a5244a0a23521d3d309c776"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Requirement Files",
+      "item": [
+        {
+          "name": "Upload File",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "8373b77b-2cda-4ca4-a29e-e8fabda073ca",
+                  "src": "/C:/Users/Hassa/Downloads/formulas_formatted.docx"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/file/6a5244a0a23521d3d309c776",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "file",
+                "6a5244a0a23521d3d309c776"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Files",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/file/6a5244a0a23521d3d309c776",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "file",
+                "6a5244a0a23521d3d309c776"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete File",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/file/6a5413a15f8800dacd12f481",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "file",
+                "6a5413a15f8800dacd12f481"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
