@@ -36,7 +36,9 @@ const uploadFile = async (req, res) => {
     if (req.file?.path) {
       try {
         await fs.unlink(req.file.path);
-      } catch (fileError) {}
+      } catch (fileError) {
+        console.error("Could not delete uploaded file:", fileError);
+      }
     }
 
     if (error.name === "CastError") {
